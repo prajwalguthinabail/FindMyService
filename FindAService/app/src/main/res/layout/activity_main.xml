@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    android:backgroundTint="#f5eee5"
+    tools:context="com.rit.cs.MainActivity">
+
+    <ImageButton
+        android:id="@+id/provider"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:scaleType="fitCenter"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@null"
+        android:src="@mipmap/provider2" />
+
+
+    <ImageButton
+        android:id="@+id/consumer"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:scaleType="fitCenter"
+        android:background="@null"
+        android:layout_below="@id/provider"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:src="@mipmap/consumer" />
+
+    <TextView
+        android:id="@+id/providerlbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/provider"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif"
+        android:text="@string/provider"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/consumerlbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/consumer"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif"
+        android:text="@string/consumer"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+</RelativeLayout>

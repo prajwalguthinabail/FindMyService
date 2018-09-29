@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Find My Service</string>
+    <string name="provider">Provider</string>
+    <string name="consumer">Consumer</string>
+</resources>

@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://controller.cs.rit.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://controller.cs.rit.com/">
+
+<xs:element name="addService" type="tns:addService"/>
+
+<xs:element name="addServiceResponse" type="tns:addServiceResponse"/>
+
+<xs:element name="goOffline" type="tns:goOffline"/>
+
+<xs:element name="goOfflineResponse" type="tns:goOfflineResponse"/>
+
+<xs:element name="goOnline" type="tns:goOnline"/>
+
+<xs:element name="goOnlineResponse" type="tns:goOnlineResponse"/>
+
+<xs:element name="registerProvider" type="tns:registerProvider"/>
+
+<xs:element name="registerProviderResponse" type="tns:registerProviderResponse"/>
+
+<xs:element name="removeService" type="tns:removeService"/>
+
+<xs:element name="removeServiceResponse" type="tns:removeServiceResponse"/>
+
+<xs:element name="requestService" type="tns:requestService"/>
+
+<xs:element name="requestServiceResponse" type="tns:requestServiceResponse"/>
+
+<xs:element name="updateLocation" type="tns:updateLocation"/>
+
+<xs:element name="updateLocationResponse" type="tns:updateLocationResponse"/>
+
+<xs:element name="verify" type="tns:verify"/>
+
+<xs:element name="verifyResponse" type="tns:verifyResponse"/>
+
+<xs:complexType name="goOffline">
+<xs:sequence>
+<xs:element name="phoneNo" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="goOfflineResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registerProvider">
+<xs:sequence>
+<xs:element name="phoneNo" type="xs:long"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="latitude" type="xs:double"/>
+<xs:element name="longitude" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registerProviderResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="verify">
+<xs:sequence>
+<xs:element name="phoneNo" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="verifyResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="goOnline">
+<xs:sequence>
+<xs:element name="phoneNo" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="goOnlineResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="requestService">
+<xs:sequence>
+<xs:element name="service" type="xs:string" minOccurs="0"/>
+<xs:element name="latitude" type="xs:double"/>
+<xs:element name="longitude" type="xs:double"/>
+<xs:element name="distance" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="requestServiceResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:resultModel" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resultModel">
+<xs:sequence>
+<xs:element name="description" type="xs:string" minOccurs="0"/>
+<xs:element name="latitude" type="xs:double"/>
+<xs:element name="longitude" type="xs:double"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="phoneNo" type="xs:long"/>
+<xs:element name="service" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addService">
+<xs:sequence>
+<xs:element name="phoneNo" type="xs:long"/>
+<xs:element name="service" type="xs:string" minOccurs="0"/>
+<xs:element name="description" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addServiceResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeService">
+<xs:sequence>
+<xs:element name="phoneNo" type="xs:long"/>
+<xs:element name="service" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeServiceResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateLocation">
+<xs:sequence>
+<xs:element name="phoneNo" type="xs:long"/>
+<xs:element name="latitude" type="xs:double"/>
+<xs:element name="longitude" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateLocationResponse">
+<xs:sequence/>
+</xs:complexType>
+</xs:schema>
